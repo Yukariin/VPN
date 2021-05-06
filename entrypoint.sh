@@ -1,28 +1,28 @@
 #!/bin/bash
 
-#v2ray-plugin版本
+#v2ray-plugin version
 if [[ -z "${VER}" ]]; then
-  VER="latest"
+  export VER="latest"
 fi
 echo ${VER}
 
 if [[ -z "${PASSWORD}" ]]; then
-  PASSWORD="5c301bb8-6c77-41a0-a606-4ba11bbab084"
+  export PASSWORD="5c301bb8-6c77-41a0-a606-4ba11bbab084"
 fi
 echo ${PASSWORD}
 
 if [[ -z "${ENCRYPT}" ]]; then
-  ENCRYPT="chacha20-ietf-poly1305"
+  export ENCRYPT="chacha20-ietf-poly1305"
 fi
 
 
 if [[ -z "${V2_Path}" ]]; then
-  V2_Path="/s233"
+  export V2_Path="/s233"
 fi
 echo ${V2_Path}
 
 if [[ -z "${QR_Path}" ]]; then
-  QR_Path="/qr_img"
+  export QR_Path="/qr_img"
 fi
 echo ${QR_Path}
 
