@@ -14,6 +14,8 @@ COPY wwwroot.tar.gz /wwwroot/wwwroot.tar.gz
 COPY conf/ /conf
 COPY entrypoint.sh /entrypoint.sh
 
-RUN chmod +x /entrypoint.sh
+RUN tar xvf /wwwroot/wwwroot.tar.gz -C /wwwroot && rm -rf /wwwroot/wwwroot.tar.gz \
+    && mkdir /etc/shadowsocks-libev \
+    && chmod +x /entrypoint.sh
 
 CMD /entrypoint.sh
