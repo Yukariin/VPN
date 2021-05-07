@@ -4,9 +4,9 @@ ARG DEBIAN_FRONTEND=noninteractive
 RUN set -ex \
     && apt update -y \
     && apt upgrade -y \
-    && apt install -y wget unzip qrencode \
-    && apt install -y shadowsocks-libev shadowsocks-v2ray-plugin \
-    && apt install -y nginx-light \
+    && apt install -y wget qrencode \
+        shadowsocks-libev shadowsocks-v2ray-plugin \
+        nginx-light \
     && apt autoremove -y \
     && apt clean -y
 
