@@ -41,5 +41,4 @@ else
 fi
 
 ss-server -c /etc/shadowsocks-libev/config.json &
-rm -rf /etc/nginx/sites-enabled/default
 nginx -g 'daemon off;'
