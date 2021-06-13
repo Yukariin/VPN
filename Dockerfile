@@ -15,6 +15,7 @@ COPY conf/ /conf
 COPY entrypoint.sh /entrypoint.sh
 
 RUN tar xvf /wwwroot/wwwroot.tar.gz -C /wwwroot && rm -rf /wwwroot/wwwroot.tar.gz \
+    rm -rf /etc/nginx/sites-enabled/default \
     && chmod +x /entrypoint.sh
 
 CMD /entrypoint.sh
