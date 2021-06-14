@@ -4,7 +4,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 RUN set -ex \
     && apt update -y \
     && apt upgrade -y \
-    && apt install -y wget qrencode \
+    && apt install -y qrencode \
         shadowsocks-libev shadowsocks-v2ray-plugin \
         nginx-light \
     && apt autoremove -y \
