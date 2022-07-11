@@ -9,7 +9,6 @@ if [[ -z "${ENCRYPT}" ]]; then
   export ENCRYPT="chacha20-ietf-poly1305"
 fi
 
-
 if [[ -z "${V2_Path}" ]]; then
   export V2_Path="/s233"
 fi
@@ -19,7 +18,6 @@ if [[ -z "${QR_Path}" ]]; then
   export QR_Path="/qr_img"
 fi
 echo ${QR_Path}
-
 
 bash /conf/shadowsocks-libev_config.json > /etc/shadowsocks-libev/config.json
 echo /etc/shadowsocks-libev/config.json
